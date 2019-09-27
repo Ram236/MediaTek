@@ -1,0 +1,20 @@
+<div class="row mb-0 ">
+        <div class="input-field col" [ngClass]="{'s8':display,'s12':!display}">
+            <select  (change)="onChangeGenre($event.target.value)" id="genreSelect">
+                <option value="" disabled selected>Select Genre</option>
+                <option *ngFor="let item of generesList" [ngValue]="item">
+                    {{ item}}
+                  </option>
+              </select>
+            <br><br>
+        </div>
+        <div class="input-field col s4" *ngIf="display">
+            <select (change)="onChangeLang($event.target.value)" id="langSelect">
+                <option value="" disabled selected>Select Genre</option>
+                <option *ngFor="let item of langList" [ngValue]="item">
+                    {{ item}}
+                  </option>
+              </select>
+            <br><br>
+        </div>
+</div>

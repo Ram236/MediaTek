@@ -1,0 +1,33 @@
+.card .card-image {
+  position: relative;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  img {
+    width: 70%;
+    top: -15px;
+    margin: 0 auto;
+
+  }
+}
+.card {
+  background-color: #0000001f;
+  .card-content{
+    strong{
+      color: #454545;
+    }
+
+  }
+  .more-detail{
+    position: relative;
+    top: -7px;
+  }
+}
+
+.btn-floating.halfway-fab {
+  bottom: 2px !important;
+}
+.modal-trigger{
+  cursor: pointer;
+}

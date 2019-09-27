@@ -1,0 +1,22 @@
+<div class="card {{hoverEffect}}" (mouseenter)="hoverEffect='z-depth-4'" (mouseleave)="hoverEffect=''">
+  <div class="card-image waves-effect waves-block waves-light">
+    <img class="activator " src="assets/images/logos/{{channelData.ttCode+'.png'}}">
+    <div (click)="purchase()" >
+      <a class="btn-floating halfway-fab waves-effect waves-light red" [ngClass]="{ 'red': addedToCart, 'green': !addedToCart }">
+        <i class="material-icons" *ngIf="addedToCart">add_shopping_cart</i>
+        <i class="material-icons" *ngIf="!addedToCart">check</i></a>
+    </div>
+  </div>
+  <div class="card-content">
+    <span class="card-title activator grey-text text-darken-4">{{channelName}}<i class="material-icons right">more_vert</i></span>
+    <strong>Price: {{channelData?.channelPrice | currency}}</strong>
+      <a data-target="channelInfoModal" class="modal-trigger right" (click)="emitModalData()">
+         <span class="more-detail">More Detail</span> <i class="material-icons ">open_in_new</i> </a>
+
+  </div>
+  <div class="card-reveal">
+    <span class="card-title grey-text text-darken-4">{{channelData?.name}}<i class="material-icons right">close</i></span>
+    <p >{{channelData?.description}}</p>
+  </div>
+</div>
+
